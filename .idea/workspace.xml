@@ -341,7 +341,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609774429000</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Initial Commit">
+      <created>1609775424382</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1609775424384</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Initial Commit">
+      <created>1609775608756</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1609775608757</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -392,10 +406,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="627" y="225" key="AndroidCreateXmlResourceDialog/0.0.1536.824@0.0.1536.824" timestamp="1607861304301" />
-    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1609775432912">
+    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1609775636798">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1609775432912" />
+    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1609775636798" />
     <state x="100" y="100" width="1338" height="624" key="DiffContextDialog" timestamp="1607864846122">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -440,10 +454,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607599183835" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609775443572">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609775616896">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609775443572" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609775616896" />
     <state x="584" y="190" key="chooseDestDirectoryDialog" timestamp="1603105141022">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
