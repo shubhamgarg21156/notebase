@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "380300791943",
+    "firebase_url": "https://notebase-cloud.firebaseio.com",
+    "project_id": "notebase-cloud",
+    "storage_bucket": "notebase-cloud.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380300791943:android:9dfff84678be1e4da9a822",
+        "android_client_info": {
+          "package_name": "com.example.notebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380300791943-7oodq7u637itvckcv69mg100q96cvt9n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCg1it-DkMMEcouyBMa7WmRreS4c_FaN1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "380300791943-7oodq7u637itvckcv69mg100q96cvt9n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,227 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:id="@+id/drawerlayout"
+    tools:openDrawer="start"
+    android:orientation="horizontal"
+    tools:context=".Profile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#000000"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="PROFILE"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:gravity="center_horizontal"
+        android:layout_marginTop="140dp"
+         >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="140dp"
+                android:layout_height="145dp"
+                app:cardCornerRadius="240dp"
+                android:id="@+id/cardview"
+                android:layout_marginStart="120dp"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="250dp"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/ic_logout"
+                        android:id="@+id/profileImage"
+                        android:scaleType="centerCrop"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/profileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardview"
+                android:layout_marginVertical="10dp"
+                android:gravity="center"
+                android:text="Name"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/profileEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profileName"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center"
+                android:text="Email"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/nav_menu"
+        android:fitsSystemWindows="true"
+        android:id="@+id/nav_bar"
+        android:background="#292929"
+        android:layout_gravity="start"
+        app:itemTextColor="#FFFFFF">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="180dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.3"
+                >
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/myprofile"
+                    android:background="#000000"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:text="My Profile"
+                    android:textColor="#BABDFF"
+                    android:textAllCaps="false"
+                    android:drawableLeft="@drawable/ic_profile"
+                    android:textAlignment="center"
+                    android:textSize="20sp"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mynotes"
+                    android:background="#80000000"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginVertical="10.34dp"
+                    android:padding="10dp"
+                    android:text="My Notes"
+                    android:textAllCaps="false"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:drawableStart="@drawable/ic_mynotes"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                >
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/aboutus"
+                    android:background="#000000"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:text="About Us"
+                    android:textColor="#BABDFF"
+                    android:textAllCaps="false"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:drawableStart="@drawable/ic_about"
+                    />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/rateus"-->
+<!--                    android:background="#80000000"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_marginVertical="10.34dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="Rate Us"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#BABDFF"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:drawableStart="@drawable/ic_rate"/>-->
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/share"-->
+<!--                    android:background="#000000"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:textColor="#BABDFF"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:text="Share App"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:drawableStart="@drawable/ic_baseline_share_24"/>-->
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/logout"
+                    android:background="#000000"
+                    android:layout_marginEnd="10dp"
+                    android:padding="15dp"
+                    android:text="LOG OUT"
+                    android:textColor="#BABDFF"
+                    android:textAllCaps="false"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:drawableStart="@drawable/ic_logout"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

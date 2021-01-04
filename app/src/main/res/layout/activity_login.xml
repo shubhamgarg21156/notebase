@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="38dp"
+    android:paddingLeft="38dp"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:text="Login"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="60sp"/>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:orientation="vertical">
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="Email"
+                 android:textColor="#B6B6C5"
+                 android:textSize="15sp" />
+             <com.google.android.material.textfield.TextInputLayout
+                 android:id="@+id/email"
+                 android:layout_width="match_parent"
+                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                 android:layout_height="wrap_content"
+                 app:boxBackgroundColor="#1A1A1B"
+                 app:boxCornerRadiusBottomEnd="15dp"
+                 app:boxCornerRadiusBottomStart="15dp"
+                 app:boxCornerRadiusTopEnd="15dp"
+                 app:boxCornerRadiusTopStart="15dp"
+                 app:errorTextColor="#F1EEF4"
+                 app:boxStrokeColor="#FAF9FD">
+                 <com.google.android.material.textfield.TextInputEditText
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:textSize="15dp"
+                     android:id="@+id/Email"
+                     android:textColor="#FCFCFD"/>
+             </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Password"
+              android:textColor="#B6B6C5"
+              android:textSize="15sp" />
+          <com.google.android.material.textfield.TextInputLayout
+              android:id="@+id/password"
+              android:layout_width="match_parent"
+              style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+              android:layout_height="wrap_content"
+              app:boxBackgroundColor="#1A1A1B"
+              app:boxStrokeColor="#FAF9FD"
+              app:boxCornerRadiusBottomEnd="15dp"
+              app:boxCornerRadiusBottomStart="15dp"
+              app:boxCornerRadiusTopEnd="15dp"
+              app:boxCornerRadiusTopStart="15dp"
+              app:endIconMode="password_toggle">
+
+              <com.google.android.material.textfield.TextInputEditText
+                  android:id="@+id/Password"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:inputType="textPassword"
+                  android:textColor="#FCFCFD"
+                  android:textSize="15sp" />
+          </com.google.android.material.textfield.TextInputLayout>
+
+      </LinearLayout>
+      <androidx.appcompat.widget.AppCompatButton
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:background="@drawable/mybutton"
+        android:backgroundTint="#674E4E"
+        android:text="Login"
+        android:textColor="#F3F2F4"
+        android:textSize="20sp"
+        android:id="@+id/login"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="or Login with"
+                android:textColor="#F3F2F4"
+                android:textSize="20sp"
+                android:layout_marginVertical="10dp"
+                android:textAlignment="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/google"
+                    android:layout_marginHorizontal="10dp"
+                    android:id="@+id/google"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/fb"
+                    android:layout_marginHorizontal="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.1">
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_gravity="center"
+                android:id="@+id/progressbar" />
+
+        </LinearLayout>
+
+</LinearLayout>

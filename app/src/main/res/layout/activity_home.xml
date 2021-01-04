@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:src="@mipmap/brand" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Started"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:theme="@style/Theme.MaterialComponents"
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:text="Log in"
+        android:textAllCaps="false"
+        android:textColor="#A07A7A"
+        app:strokeColor="#A07A7A"
+        app:strokeWidth="2dp"
+        android:backgroundTint="@color/BLACK"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:theme="@style/Theme.MaterialComponents"
+        android:backgroundTint="#674E4E"
+        android:text="Sign Up"
+        android:textColor="#F3F2F4"
+        android:textSize="25sp"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginVertical="10dp"
+        android:outlineProvider="background"
+        android:id="@+id/signup"/>
+
+
+
+</LinearLayout>
