@@ -87,8 +87,8 @@ public class Update extends AppCompatActivity {
                         @Override
                         public void onSuccess(Void aVoid) {
 
-                            makeText(Update.this, "Note Updated", LENGTH_SHORT).show();
-                            onBackPressed();
+
+
 
                         }
                     }).addOnFailureListener(new OnFailureListener() {
@@ -132,8 +132,6 @@ public class Update extends AppCompatActivity {
                         @Override
                         public void onSuccess(Void aVoid) {
 
-                            makeText(Update.this, "Note Updated", LENGTH_SHORT).show();
-                            onBackPressed();
 
                         }
                     }).addOnFailureListener(new OnFailureListener() {
