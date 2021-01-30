@@ -6,7 +6,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -34,19 +36,36 @@ public class Note extends AppCompatActivity {
     FloatingActionButton Save;
     public FirebaseFirestore firebaseFireStore;
     String ccolor,tcolor;
+    SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
-        getWindow().setStatusBarColor(Color.BLACK);
+        getWindow().setStatusBarColor(getResources().getColor(R.color.StatusBarColor));
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Drawable drawable = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_baseline_arrow_drop_down_circle_24);
+
+        sharedPreferences = this.getSharedPreferences("com.example.notebase", Context.MODE_PRIVATE);
+        Drawable drawable;
+        if(sharedPreferences.getBoolean("DarkMode",false)){
+            drawable = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_baseline_arrow_drop_down_circle_24);
+        }
+        else{
+            drawable = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_baseline_arrow_drop_down_circle_24_light);
+        }
+
         toolbar.setOverflowIcon(drawable);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
 
-        Title=findViewById(R.id.title);
+
+        if(sharedPreferences.getBoolean("DarkMode",false)){
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
+        }
+        else{
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24_light);
+        }
+
+       Title=findViewById(R.id.title);
         Content=findViewById(R.id.content);
         Save=findViewById(R.id.save);
         tcolor="#1E63B8";

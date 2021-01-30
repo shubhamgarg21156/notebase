@@ -36,12 +36,12 @@
         "source": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_menu_round.png"
     },
     {
-        "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_share_24.xml.flat",
         "source": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\src\\main\\res\\drawable\\ic_baseline_share_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_addnote.xml.flat",
@@ -54,6 +54,10 @@
     {
         "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_arrow_back_24_light.xml.flat",
+        "source": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_back_24_light.xml"
     },
     {
         "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_profile.xml.flat",
@@ -82,6 +86,10 @@
     {
         "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\layout_note_toolbar.xml.flat",
+        "source": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\src\\main\\res\\layout\\note_toolbar.xml"
     },
     {
         "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_addnote_foreground.xml.flat",
@@ -192,6 +200,10 @@
         "source": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\src\\main\\res\\mipmap-hdpi\\ic_addnote.png"
     },
     {
+        "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_hamburger_light.xml.flat",
+        "source": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\src\\main\\res\\drawable\\ic_hamburger_light.xml"
+    },
+    {
         "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\menu_nav_menu.xml.flat",
         "source": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\src\\main\\res\\menu\\nav_menu.xml"
     },
@@ -210,6 +222,10 @@
     {
         "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_card_shape.xml.flat",
         "source": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\src\\main\\res\\drawable\\card_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\menu_main_menu.xml.flat",
+        "source": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\src\\main\\res\\menu\\main_menu.xml"
     },
     {
         "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hamburger.png.flat",
@@ -242,6 +258,10 @@
     {
         "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_arrow_drop_down_circle_24.xml.flat",
         "source": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_drop_down_circle_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_arrow_drop_down_circle_24_light.xml.flat",
+        "source": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_drop_down_circle_24_light.xml"
     },
     {
         "merged": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",

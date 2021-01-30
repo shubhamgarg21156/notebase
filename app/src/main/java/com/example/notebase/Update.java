@@ -5,13 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
+import android.app.ActionBar;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -37,17 +41,24 @@ public class Update extends AppCompatActivity {
     FloatingActionButton Update;
     int position = -1;
     public FirebaseFirestore firebaseFireStore;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update);
-        getWindow().setStatusBarColor(Color.BLACK);
+        getWindow().setStatusBarColor(getResources().getColor(R.color.StatusBarColor));
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
+        sharedPreferences = this.getSharedPreferences("com.example.notebase", Context.MODE_PRIVATE);
+        if(sharedPreferences.getBoolean("DarkMode",false)){
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
+        }
+        else{
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24_light);
+        }
 
         Title=findViewById(R.id.title);
         Content=findViewById(R.id.content);

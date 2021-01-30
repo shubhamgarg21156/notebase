@@ -11,6 +11,8 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,18 +24,28 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.sql.Ref;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 
-public class Adaptor extends RecyclerView.Adapter<Adaptor.ViewHolder>  {
+public class Adaptor extends RecyclerView.Adapter<Adaptor.ViewHolder> implements Filterable {
 
     List<String> title;
     List<String> content;
     List<String> titleColor;
     List<String> contentColor;
     List<String> Refrence;
+
+    List<String> titleAll;
+    List<String> contentAll;
+    List<String> titleColorAll;
+    List<String> contentColorAll;
+    List<String> RefrenceAll;
+
     FirebaseFirestore firebaseFirestore;
     Activity a ;
 
@@ -48,6 +60,12 @@ public class Adaptor extends RecyclerView.Adapter<Adaptor.ViewHolder>  {
         this.titleColor = titleColor;
         this.contentColor = contentColor;
         this.Refrence=Refrence;
+
+        this.titleAll = new ArrayList<>(title);
+        this.contentAll = new ArrayList<>(content);
+        this.titleColorAll = new ArrayList<>(titleColor);
+        this.contentColorAll = new ArrayList<>(contentColor);
+        this.RefrenceAll = new ArrayList<>(Refrence);
     }
 
 
@@ -203,6 +221,53 @@ public class Adaptor extends RecyclerView.Adapter<Adaptor.ViewHolder>  {
     public int getItemCount() {
         return title.size();
     }
+
+    @Override
+    public Filter getFilter() {
+        return filter;
+    }
+
+    Filter filter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+
+            List<Integer> filteredlist = new ArrayList<>();
+            if (constraint.toString().isEmpty()) {
+                for (int i = 0; i < contentAll.size(); i++) filteredlist.add(i);
+            } else {
+
+                for (int i = 0; i < contentAll.size(); i++) {
+
+                    String content = contentAll.get(i);
+                    if (content.toLowerCase().contains(constraint.toString().toLowerCase())) {
+                        filteredlist.add(i);
+                    }
+                }
+            }
+
+            FilterResults filterResults = new FilterResults();
+            filterResults.values = filteredlist;
+            return filterResults;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+
+            content.clear();
+            title.clear();
+            Refrence.clear();
+            contentColor.clear();
+            titleColor.clear();
+            for (int i : (Collection<? extends Integer>)results.values){
+                content.add(contentAll.get(i));
+                title.add(titleAll.get(i));
+                Refrence.add(RefrenceAll.get(i));
+                contentColor.add(contentColorAll.get(i));
+                titleColor.add(titleColorAll.get(i));
+            }
+            notifyDataSetChanged();
+        }
+    };
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         View view;

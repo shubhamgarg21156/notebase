@@ -8,13 +8,21 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.annotation.SuppressLint;
+import android.app.ActionBar;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -24,15 +32,29 @@ public class About extends AppCompatActivity implements NavigationView.OnNavigat
     NavigationView nav_bar;
     ActionBarDrawerToggle toggle;
     Button myProfile,mynotes,aboutus,rateus,share,logout;
+    SharedPreferences sharedPreferences;
+    @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        getWindow().setStatusBarColor(Color.BLACK);
+        getWindow().setStatusBarColor(getResources().getColor(R.color.StatusBarColor));
+
         final DrawerLayout drawerLayout = findViewById(R.id.drawerlayout);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+//        getSupportActionBar().setCustomView(getLayoutInflater().inflate(R.layout.activity_update, null),
+//                new ActionBar.LayoutParams(
+//                        ActionBar.LayoutParams.WRAP_CONTENT,
+//                        ActionBar.LayoutParams.MATCH_PARENT,
+//                        Gravity.CENTER
+//                )
+//        );
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+
+
         nav_bar = findViewById(R.id.nav_bar);
         nav_bar.setNavigationItemSelectedListener(this);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.start, R.string.close);
@@ -40,7 +62,14 @@ public class About extends AppCompatActivity implements NavigationView.OnNavigat
         toggle.setDrawerIndicatorEnabled(false);
         toggle.syncState();
         drawerLayout.closeDrawer(GravityCompat.START);
-        toggle.setHomeAsUpIndicator(R.drawable.hamburger);
+        sharedPreferences = this.getSharedPreferences("com.example.notebase", Context.MODE_PRIVATE);
+        if(sharedPreferences.getBoolean("DarkMode",false)){
+            toggle.setHomeAsUpIndicator(R.drawable.hamburger);
+        }
+        else{
+            toggle.setHomeAsUpIndicator(R.drawable.ic_hamburger_light);
+        }
+
         toggle.setToolbarNavigationClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

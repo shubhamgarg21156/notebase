@@ -23,6 +23,25 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-2\\files-2.1\\e524bd92738cafdccd3e099cd6779980\\jetified-firebase-ui-auth-3.0.0\\res\\values-v26\\values-v26.xml",
+                    "from": {
+                        "startLines": "2,6,10,14",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,253,438,631",
+                        "endLines": "5,9,13,21",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "248,433,626,1035"
+                    },
+                    "to": {
+                        "startLines": "24,28,32,36",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "1398,1596,1781,1974",
+                        "endLines": "27,31,35,43",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "1591,1776,1969,2378"
+                    }
+                },
+                {
                     "source": "C:\\Users\\hp\\AndroidStudioProjects\\Notebase2\\app\\src\\main\\res\\values-v26\\styles.xml",
                     "from": {
                         "startLines": "3",
@@ -39,25 +58,6 @@
                         "endLines": "8",
                         "endColumns": "12",
                         "endOffsets": "459"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-2\\files-2.1\\21b3778c647ca5bc2541e8d5e47ca219\\jetified-firebase-ui-auth-3.0.0\\res\\values-v26\\values-v26.xml",
-                    "from": {
-                        "startLines": "2,6,10,14",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,253,438,631",
-                        "endLines": "5,9,13,21",
-                        "endColumns": "12,12,12,12",
-                        "endOffsets": "248,433,626,1035"
-                    },
-                    "to": {
-                        "startLines": "24,28,32,36",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "1398,1596,1781,1974",
-                        "endLines": "27,31,35,43",
-                        "endColumns": "12,12,12,12",
-                        "endOffsets": "1591,1776,1969,2378"
                     }
                 }
             ]

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@color/backgroundColor"
     android:id="@+id/drawerlayout"
     tools:openDrawer="start"
     tools:context=".MainActivity">
@@ -19,7 +19,7 @@
         app:headerLayout="@layout/nav_menu"
         android:fitsSystemWindows="true"
         android:id="@+id/nav_bar"
-        android:background="#292929"
+        android:background="@color/NavBarColor"
         android:layout_gravity="start"
         app:itemTextColor="#FFFFFF">
         <LinearLayout

@@ -1,8 +1,10 @@
 package com.example.notebase;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -40,20 +42,22 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class Profile extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
     NavigationView nav_bar;
     ActionBarDrawerToggle toggle;
-    Button myProfile,mynotes,aboutus,rateus,share,logout;
+    Button myProfile,mynotes,aboutus,logout;
     TextView profileName,profileEmail;
     ImageView profileImage;
     FirebaseFirestore firebaseFirestore;
 
+    SharedPreferences sharedPreferences;
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        getWindow().setStatusBarColor(Color.BLACK);
+        getWindow().setStatusBarColor(getResources().getColor(R.color.StatusBarColor));
         final DrawerLayout drawerLayout = findViewById(R.id.drawerlayout);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -64,7 +68,15 @@ public class Profile extends AppCompatActivity implements NavigationView.OnNavig
         toggle.setDrawerIndicatorEnabled(false);
         toggle.syncState();
         drawerLayout.closeDrawer(GravityCompat.START);
-        toggle.setHomeAsUpIndicator(R.drawable.hamburger);
+
+        sharedPreferences = this.getSharedPreferences("com.example.notebase", Context.MODE_PRIVATE);
+        if(sharedPreferences.getBoolean("DarkMode",false)){
+            toggle.setHomeAsUpIndicator(R.drawable.hamburger);
+        }
+        else{
+            toggle.setHomeAsUpIndicator(R.drawable.ic_hamburger_light);
+        }
+
         toggle.setToolbarNavigationClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,8 +87,6 @@ public class Profile extends AppCompatActivity implements NavigationView.OnNavig
         myProfile=findViewById(R.id.myprofile);
         mynotes=findViewById(R.id.mynotes);
         aboutus=findViewById(R.id.aboutus);
-        rateus=findViewById(R.id.rateus);
-        share=findViewById(R.id.share);
         logout=findViewById(R.id.logout);
         profileEmail=findViewById(R.id.profileEmail);
         profileName=findViewById(R.id.profileName);
@@ -106,18 +116,7 @@ public class Profile extends AppCompatActivity implements NavigationView.OnNavig
                 drawerLayout.closeDrawer(GravityCompat.START);
             }
         });
-//        share.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(Profile.this, "Coming Soon", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//        rateus.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(Profile.this, "Coming Soon", Toast.LENGTH_SHORT).show();
-//            }
-//        });
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -215,10 +214,9 @@ public class Profile extends AppCompatActivity implements NavigationView.OnNavig
 
     }
 
-
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         return false;
     }
+
 }

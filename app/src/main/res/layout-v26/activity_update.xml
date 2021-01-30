@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".Note"
     android:orientation="vertical"
-    android:background="#000000">
+    android:background="@color/backgroundColor">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
-        android:background="#000000">
+        android:background="@color/backgroundColor">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,7 +23,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/textColor"
                 android:text="@string/note"
                 android:gravity="center"
                 android:textSize="20sp"
